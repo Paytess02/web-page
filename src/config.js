@@ -8,6 +8,7 @@ const config = {
     registerUrl: 'https://psychology-backend.onrender.com/register',
     chatbotAccessUrl: 'https://psychology-backend.onrender.com/chatbot-access',
     chatApiUrl: 'https://psychology-backend.onrender.com/chat',
+    userRequestApiUrl: 'https://psychology-backend.onrender.com/user-requests',
   },
   header: {
     title: "Psychology Student Platform",

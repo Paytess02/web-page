@@ -9,6 +9,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState('');
   const [error, setError] = useState('');
+  const [username, setUsername] = useState('');
   const [showRegister, setShowRegister] = useState(false); // Controls registration modal visibility
   const [showLogin, setShowLogin] = useState(false);
   const [showAdminDashboard, setShowAdminDashboard] = useState(false);
@@ -16,6 +17,7 @@ function App() {
 
   const handleLogout = () => {
     setToken('');
+    setUsername('');
     setAdminToken(null);
     setIsLoggedIn(false);
     setShowAdminDashboard(false);
@@ -36,6 +38,7 @@ function App() {
     try {
       const response = await axios.post(config.api.loginUrl, { username, password });
       setToken(response.data.token);
+      setUsername(username);
       setIsLoggedIn(true);
       setShowLogin(false);
     } catch (error) {
@@ -57,7 +60,7 @@ function App() {
         <>
           <Body />
           <Footer />
-          {isLoggedIn && <Chatbot token={token} />}
+          {isLoggedIn && <Chatbot token={token} username={username}/>}
           {showLogin && (
             <LoginModal
               show={showLogin}

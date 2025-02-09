@@ -311,4 +311,74 @@ body, html {
 .send-button:hover:enabled {
   background-color: #45a049;
 }
+/* Feedback Form */
+.feedback-form {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.feedback-form textarea {
+  width: 90%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.feedback-form button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.feedback-form button:first-child {
+  background-color: #4CAF50; /* Submit Feedback */
+  color: white;
+}
+
+.feedback-form button:first-child:hover {
+  background-color: #45a049;
+}
+
+.feedback-form button:last-child {
+  background-color: #E74C3C; /* Connect with Admin */
+  color: white;
+}
+
+.feedback-form button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Add spacing for feedback buttons */
+.feedback-form button + button {
+  margin-left: 5px;
+}
+
+/* Adjust Chat Window to make space for feedback form */
+
+
+/* Ensure buttons and inputs are aligned */
+.feedback-form textarea + button {
+  margin-top: 5px;
+}
+
+/* Optional: Highlight admin response */
+.message.admin p {
+  background-color: #FFD700; /* Admin message in yellow */
+  color: black;
+  padding: 8px 12px;
+  border-radius: 15px;
+  text-align: left;
+  align-self: flex-start;
+}
 
